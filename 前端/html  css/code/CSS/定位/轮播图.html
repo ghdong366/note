@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        /* 使用ul之前，都要消除原本的默认的格式 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            position: relative;
+            height: 280px;
+            width: 520px;
+            margin: 200px auto;
+            border-radius: 30px;
+            background-color: pink;
+        }
+
+        .box img {
+            height: 280px;
+            width: 520px;
+            border-radius: 30px;
+        }
+
+        .pre {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            height: 30px;
+            width: 20px;
+            background-color: rgba(0, 0, 0, 0.705);
+            margin-top: -15px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .next {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            height: 30px;
+            width: 20px;
+            background-color: rgba(0, 0, 0, 0.705);
+            margin-top: -15px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 15px 0 0 15px;
+        }
+        /*底部小按钮盒子，用ul  */
+        .nav {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 70px;
+            height: 14px;
+            background-color: rgba(255, 255, 255, 0.678);
+            border-radius: 7px;
+            margin-left: -35px;
+        }
+
+        .nav li {
+            float: left;
+            height: 8px;
+            width: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+        }
+        .nav li:hover {
+            background-color: rgb(50, 181, 241);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="taobao.jpg" alt="图片">
+        <!-- 左箭头 -->
+        <a href="#" class="pre">&lt;</a>
+        <!-- 右箭头 -->
+        <a href="#" class="next">&gt;</a>
+        <!-- 底部小圆点 -->
+        <ul class="nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+/* 建议遵循以下顺序:
+1.布局定位属性:
+2.自身属性:
+3.文本属性:
+4.其他属性( CSS3) 
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 版心的大小 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部盒子 */
+.header {
+    height: 42px;
+    margin: 30px auto;
+    /* background-color: pink; */
+}
+
+.logo {
+    float: left;
+    height: 42px;
+    width: 195px;
+    background-image: url(imags/logo.png);
+    margin-right: 60px;
+}
+
+.nav {
+    float: left;
+    margin-left: 5px;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    display: block;
+    height: 42px;
+    margin: 0 10px;
+    color: #050505;
+    font-size: 20px;
+    line-height: 42px;
+}
+
+.nav ul li a:hover {
+    color: #2577c4;
+    border-bottom: 3px solid rgb(37, 160, 209);
+}
+
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    margin-left: 50px;
+}
+
+.search input {
+    float: left;
+    width: 360px;
+    height: 38px;
+    border: 2px solid #00a4ff;
+    border-right: 0;
+    font-size: 13px;
+    color: #cececf;
+    text-indent: 1.1em;
+}
+
+.search button {
+    float: left;
+    height: 42px;
+    width: 50px;
+    background-color: #00a4ff;
+    background-image: url(imags/fa-search.png);
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+.user {
+    float: right;
+    height: 42px;
+    line-height: 42px;
+}
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .banxin {
+    height: 420px;
+    /* background-color: pink; */
+    background-image: url(imags/banner2.png);
+    background-position: 50% 50%;
+}
+
+.subnav {
+    float: left;
+    height: 420px;
+    width: 190px;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+
+.subnav ul li a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.subnav ul li a:hover {
+    color: #00b4ff;
+    border-bottom: 2px solid pink;
+}
+
+.subnav ul li a span {
+    float: right;
+}
+
+.course {
+    float: right;
+    height: 300px;
+    width: 230px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.course h2 {
+    height: 48px;
+    color: #fff;
+    background-color: #9bceea;
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.bd {
+    padding: 0 20px;
+}
+
+.bd ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.bd ul li p {
+    font-size: 12px;
+    color: #bdbdbd;
+}
+
+.bd a {
+    display: block;
+    height: 38px;
+    margin-top: 5px;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+    text-align: center;
+    line-height: 38px;
+}
+
+.jingpin {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.493);
+    /* 行高会继承，它的孩子的行高都是60px */
+    line-height: 60px;
+}
+
+.jingpin h3 {
+    float: left;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #00a4ff;
+    font-size: 15px;
+}
+
+.jingpin ul {
+    float: left;
+
+}
+
+.jingpin ul li {
+    float: left;
+
+}
+
+.jingpin ul li a {
+    padding: 0 30px;
+    border-left: 1px solid #a19d9d;
+    color: #000;
+}
+
+.jingpin ul li a:hover {
+    color: #00a4ff;
+}
+
+.jingpin>a {
+    float: right;
+    margin-right: 20px;
+    color: #00a4ff;
+    font-size: 13px;
+}
+
+.box {
+    /* height: 600px; */
+    /* background-color: pink; */
+    margin-top: 30px;
+}
+
+.box-hd {
+    height: 42px;
+}
+
+.box-hd h3 {
+    float: left;
+    color: #494949;
+    line-height: 42px;
+}
+
+.box-hd a {
+    float: right;
+    margin-right: 20px;
+    line-height: 42px;
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+}
+
+/* .box-bd {
+    height:558px;
+    background-color: skyblue; 
+} */
+.box-bd ul li {
+    float: left;
+    height: 270px;
+    width: 230px;
+    background-color: #fff;
+    margin-right: 12.5px;
+    margin-bottom: 10px;
+}
+
+.box-bd ul li img {
+    width: 100%;
+}
+
+.box-bd .box-last {
+    margin-right: 0;
+}
+
+.footer {
+    height: 400px;
+    /* background-color: pink; */
+}
+
+.footer .w {
+    padding-top: 20px;
+}
+
+.copyright {
+    float: left;
+    padding-left: 30px;
+}
+
+.copyright p {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.copyright .app {
+    display: block;
+    height: 35px;
+    width: 120px;
+    border: 1px solid #00a4ff;
+    font-size: 15px;
+    font-weight: 500;
+    color: #00a4ff;
+    line-height: 35px;
+    text-align: center;
+}
+
+.link {
+    float: right;
+}
+.link dl {
+    float: left;
+    margin-left: 100px;
+}
+
+.link dl dt {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+.link dl a {
+    font-size: 12px;
+    color: #555;
+}

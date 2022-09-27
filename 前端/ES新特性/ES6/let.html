@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        let a = 34;
+        let b = 'show';
+        console.log(a+b);
+
+        // 1. 不能重复赋值
+        let name = 'tom';
+        let name = 'jerry'
+        
+        //2. 块级作用域(包含if while等有范围的)
+        {
+            let age = 19;
+        }
+        console.log(age);//获取不到age
+
+        //3. 不存在变量提升
+        console.log(girl);//会报错
+        let girl = 'alice';
+    </script>
+</body>
+</html>

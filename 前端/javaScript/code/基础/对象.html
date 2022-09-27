@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        function People(name,age,address){
+            this.name = name;
+            this.age = age;
+            this.address = address;
+
+        }
+
+        var tom = new People('tom',19,'北京');
+        console.log(tom);
+        //遍历对象中的属性
+        for(var k in tom){
+            console.log(k);
+            console.log(tom[k]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

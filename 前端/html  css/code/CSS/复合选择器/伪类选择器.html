@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* 未访问的链接a */
+        a:link {
+            text-decoration: none;
+        }
+
+        /* 鼠标点击过的a */
+        a:visited {
+            text-decoration: none;
+            color: skyblue;
+        }
+
+        /* 鼠标经过时的a */
+        a:hover {
+            text-decoration: none;
+            color: red;
+        }
+
+        /* 获得光标的表单元素 */
+        input:focus {
+            background-color: pink;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">小猪佩奇</a><br>
+    <a href="#">吉吉国王</a><br>
+    <a href="#">猴子毛毛</a><br>
+    <input type="text"><br>
+    <input type="text"><br>
+
+</body>
+
+</html>

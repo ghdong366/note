@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黏性定位</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+        div {
+            /* 说明：原本盒子距离顶部100px 由于设置了黏性定位
+            并且top:0,当盒子和顶部距离为0时，它就变成了固定位置 */
+            position: sticky;
+            top: 0;
+            height: 100px;
+            width: 600px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

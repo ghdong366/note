@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明一个类
+        class Phone{
+            //构造方法
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price;
+            }
+            play(){
+                console.log('打游戏');
+            }
+            callNumber(number){
+                console.log('打电话给：'+number);
+            }
+        }
+
+        let huawei = new Phone('华为',1999);
+        huawei.callNumber(110);
+        console.log(huawei);
+        console.log("==========");
+
+        //继承Phone
+        class SmartPhone extends Phone{
+            constructor(brand,price,color,size){
+                super(brand,price);
+                this.color = color;
+                this.size = size;
+            }
+            //重写父类中play方法
+            play(){
+                console.log('小米手机打游戏');
+            }
+
+        }
+        let mi = new SmartPhone('mi',1999,'white',6.9);
+        mi.play();
+        console.log(mi);
+
+    </script>
+</body>
+</html>

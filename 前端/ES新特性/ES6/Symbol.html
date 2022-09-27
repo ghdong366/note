@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建 Symbol
+        let s1 = Symbol();
+        console.log(s1, typeof s1);
+
+        //添加标识的 Symbol
+        let s2 = Symbol('尚硅谷');
+        let s2_2 = Symbol('尚硅谷');
+        console.log(s2 === s2_2);//返回false
+
+        //使用 Symbol for 定义
+        let s3 = Symbol.for('尚硅谷');
+        let s3_2 = Symbol.for('尚硅谷');
+        console.log(s3 === s3_2);//返回true,这里相当于java中的常量string
+    </script>
+</body>
+
+</html>

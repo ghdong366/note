@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码检查</title>
+    <style>
+        .wrong {
+            color: red;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    密码：<input type="password" id="pass">
+    <span id="tips"></span>
+    <script>
+        var password = document.getElementById('pass');
+        var tips = document.getElementById('tips');
+        password.onblur = function(){
+            var length = password.value.length;
+            console.log(length);
+            if(length<6){
+               tips.innerText = '×密码要多于六位！';
+               tips.className = 'wrong';
+            }
+            if(length>6){
+                tips.innerText = '';
+            }
+
+        }
+    </script>
+</body>
+</html>

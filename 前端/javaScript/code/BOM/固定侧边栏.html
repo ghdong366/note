@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定侧边栏</title>
+    <style>
+
+        a{
+            display: block;
+            height: 79px;
+            width: 100%;
+            color: rgb(73, 73, 73);
+            text-align: center;
+            text-decoration: none;
+            border-bottom: 1px solid rgb(112, 112, 112);
+        }
+        .goBack{
+            display: none;
+        }
+        .w{
+            width: 1000px;
+            margin: 10px auto;
+            margin-top: 0;
+        }
+        .slider-bar{
+            position: absolute;
+            top: 500px;
+            left: 50%;
+            margin-left: 500px;
+            width: 90px;
+            font-size: 16px;
+            font-family: 'HeiTi';
+            background-color: pink;
+        }
+        .header{
+            height: 100px;
+            background-color: rgb(116, 80, 158);
+        }
+        .banner{
+            height: 300px;
+            background-color: skyblue;
+        }
+        .main{
+            height: 1500px;
+            background-color: rgb(236, 198, 115);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var slider = document.querySelector('.slider-bar');
+            var goBack = document.querySelector('.goBack');
+            var top = slider.offsetTop;//获取侧边栏盒子最初与上沿距离
+            console.log(top);
+            document.onscroll = function(){
+                var hidetop = window.pageYOffset;//动态获取整个文档的滚动高度
+                console.log(hidetop);
+                
+                if(hidetop>200&&hidetop<400){
+                    slider.style.position = 'fixed';
+                    slider.style.top = (top-200)+'px';//计算到指定位置时侧边盒子距离上端的高度。注意带单位
+                }
+                else if(hidetop>=400){
+                    goBack.style.display = 'block';//将返回顶部的链接显示出来
+                }
+                else{
+                    //滚动回去时，复原
+                    slider.style.position = 'absolute';
+                    slider.style.top = top+'px';
+                    goBack.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="slider-bar">
+        <a href="###">猜你<br>喜欢</a>
+        <a href="###">反馈</a>
+        <a href="#top" class="goBack">返回<br>顶部</a>
+    </div>
+    <!-- 界面主要内容 -->
+    <div class="header w" id="top">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体区域</div>
+</body>
+</html>

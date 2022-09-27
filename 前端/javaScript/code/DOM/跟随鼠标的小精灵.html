@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟随鼠标的小精灵</title>
+    <style>
+        body{
+            height: 4000px;
+        }
+        img{
+            position: absolute;
+            /* top: 0;
+            left: 0; */
+        }
+    </style>
+</head>
+<body>
+    <img src="https://geda-1302176138.cos.ap-nanjing.myqcloud.com/img/angel.gif">
+    
+    <script>
+        var img = document.querySelector('img');
+        document.addEventListener('mousemove',function(e){
+            console.log(e.pageX);
+            console.log(e.pageY);
+            // 单位不要忘记
+            img.style.top = e.pageY+'px';
+            img.style.left= e.pageX+'px';
+        })
+    </script>
+</body>
+</html>

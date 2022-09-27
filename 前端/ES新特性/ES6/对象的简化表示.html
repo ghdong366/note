@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = 'tom';
+        let show = function(){
+            console.log("展示自我");
+        }
+
+        //对象的简化
+        const person = {
+            name,
+            show,
+            // study:function(){
+            //     console.log("我是学生，我要学习");
+            // }
+            // study可以简化为下面这种方式
+            study(){
+                console.log("我是学生，我要学习");
+            }
+        }
+        person.show();
+        person.study();
+    </script>
+</body>
+</html>
