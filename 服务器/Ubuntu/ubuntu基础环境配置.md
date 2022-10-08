@@ -32,5 +32,11 @@ sudo ufw disable
 ### 清理maven仓库的临时文件
 
 ```shell
+#/bin/bash
+
+echo 正在搜索。。。
+find / -name "*lastUpdated" | xargs rm -rf
+
+echo 清理完成！!
 ```
 
